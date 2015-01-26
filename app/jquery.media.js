@@ -5,6 +5,7 @@
  * @class Media
  * @type {{convertToMedia: Function, undo: Function}}
  */
+
 var Media;
 Media = {
     /**

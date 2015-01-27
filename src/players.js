@@ -39,6 +39,16 @@ Player.prototype.generateHTML = function(options){
         $tag = $('<iframe' + ' width="' + options.width + '" height="' + options.height + '" >');
         $tag.attr('src', options.src);
     }
+    else if(this.name == 'img'){
+        $tag = $('<img>');
+        $tag.attr('src', options.src);
+        if(options.width){
+            $tag.attr('width', options.width);
+        }
+        if(options.height){
+            $tag.attr('height', options.height);
+        }
+    }
     else if(this.isOldIE){
         $tag = $('<object></object>');
         $tag = this.setAttributesOnElement($tag, options.attrs);

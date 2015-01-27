@@ -68,3 +68,7 @@ $.fn.media = function(options, beforeConversion, afterConversion){
         Media.convertToMedia(this, options, beforeConversion, afterConversion);
     }
 };
+
+$.fn.media.mapFormat = function(format, player){
+    Media.defaults.extensions[format] = player;
+};
